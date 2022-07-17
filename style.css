@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f1f1f1;
+    overflow: hidden;
+}
+#text {
+    font-size: 12em;
+    line-height: 0.9em;
+    color: pink;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 2px;
+    transform: rotate(-28deg) skew(25deg);
+    /* transformプロパティのskewとは、cssでhtml要素に傾斜をつける事ができる関数です。
+
+    transformの後にskewを指定し、()で角度を指定する事で簡単に傾斜を調整する事ができます。
+
+    skewX()は縦のサイズは固定で横にスライドさせて傾斜をつける事ができます。
+    skewY()は横のサイズは固定で縦にスライドさせて傾斜をつける事ができます。
+    skew()はxy軸に従って縦横にスライドさせて傾斜をつける事ができます。 */
+}
+#text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 30px;
+    left: -30px;
+    color: rgba(0, 0, 0, 0.3);
+    text-shadow: none;
+    filter: blur(8px);
+    z-index: -1;
+}
